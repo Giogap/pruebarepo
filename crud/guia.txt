@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=U1u2jNYXmBw
+
+carpeta admin
+npx create-react-app .
+npm install axios
+
+carpeta server
+npm init
+npm install express
+npm install mysql
+npm install cors
+node index.js
+
+DB
+sudo service mysql start
+sudo mysql
+mysql -u root -p
+
+
+CREATE DATABASE es_db;
+
+CREATE TABLE user (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(255),
+  genero1 VARCHAR(255),
+  genero2 VARCHAR(255),
+  telefono VARCHAR(255),
+  email VARCHAR(255),
+  pais VARCHAR(255)
+);
+
+USE es_db;
+
+SHOW TABLES;
+

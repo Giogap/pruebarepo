@@ -1,5 +1,7 @@
 import './App.css';
 import { useState } from "react"
+import Axios from "axios";
+
 
 function App() {
 
@@ -10,8 +12,17 @@ function App() {
   const [correo, setCorreo] = useState("");
   const [numero, setNumero] = useState(0);
 
-  const mostrarDatos = ()=>{
-    alert(nombre)
+  const add = ()=>{
+    Axios.post("http://localhost:3001/create", {
+      nombre: nombre,
+      genero1: genero1,
+      genero2: genero2,
+      pais: pais,
+      correo: correo,
+      numero: numero
+    }).then(()=>{
+      alert("Registro Ok")
+    })
   }
 
   return (
@@ -35,7 +46,7 @@ function App() {
         <label>Numero Contacto<input onChange={(event)=>{
           setNumero(event.target.value);
         }} type="number"></input></label>
-        <button onClick={mostrarDatos}>Registrar</button>
+        <button onClick={add}>Registrar</button>
       </div>
     </div>
   );
