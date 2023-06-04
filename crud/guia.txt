@@ -3,6 +3,8 @@ https://www.youtube.com/watch?v=U1u2jNYXmBw
 carpeta admin
 npx create-react-app .
 npm install axios
+npm install dotenv
+
 
 carpeta server
 npm init
@@ -10,6 +12,8 @@ npm install express
 npm install mysql
 npm install cors
 node index.js
+npm install dotenv
+
 
 DB
 sudo service mysql start
