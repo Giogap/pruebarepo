@@ -1,5 +1,19 @@
+https://www.youtube.com/watch?v=nqu9Zt68J_M
+
 npm init -y
 npm install express
 npm install cors
 npm install mysql
 npm install sequelize
+
+
+
+
+DB
+CREATE TABLE blogs (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(100),
+  content VARCHAR(150),
+  createdAt DATE,
+  updatedAt DATE
+);
