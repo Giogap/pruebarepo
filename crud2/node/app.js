@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
     res.send("Jelou");
 });
 
-app.listen(3001, () => {
+app.listen(3001
+, () => {
     console.log("Server Ok");
 })

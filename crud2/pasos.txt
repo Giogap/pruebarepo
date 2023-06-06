@@ -1,10 +1,12 @@
-https://www.youtube.com/watch?v=nqu9Zt68J_M
+https://www.youtube.com/watch?v=TB_027rzpzY
 
 npm init -y
 npm install express
 npm install cors
-npm install mysql
+npm install mysql2
 npm install sequelize
+npm install -g nodemon
+
 
 
 
@@ -25,3 +27,13 @@ INSERT INTO blogs (id, title, content) VALUES
 (4, 'Título 4', 'Contenido de mi cuarto post'),
 (5, 'Título 5', 'Contenido de mi quinto post'),
 (6, 'Título 6', 'Contenido de mi sexto post');
+
+mysql ERROR 1698 (28000): Access denied for user 'root'@'localhost' in ubuntu
+sudo mysql -u root -p
+show databases;
+use mysql;
+show tables;
+https://www.youtube.com/watch?v=e91eQ8nutgg
+
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'gap08501250';

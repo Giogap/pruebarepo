@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from "react";
 import Axios from "axios";
 
-
 function App() {
 
   const [nombre, setNombre] = useState("");
