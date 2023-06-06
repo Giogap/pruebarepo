@@ -6,6 +6,9 @@ npm install axios
 npm install dotenv
 
 
+
+
+
 carpeta server
 npm init
 npm install express
@@ -23,6 +26,8 @@ mysql -u root -p
 
 CREATE DATABASE es_db;
 
+USE es_db;
+
 CREATE TABLE user (
   id INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(255),
@@ -33,7 +38,7 @@ CREATE TABLE user (
   pais VARCHAR(255)
 );
 
-USE es_db;
+
 
 SHOW TABLES;
 

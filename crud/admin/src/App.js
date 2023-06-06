@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from "react"
+import { useState } from "react";
 import Axios from "axios";
 
 
@@ -8,18 +8,19 @@ function App() {
   const [nombre, setNombre] = useState("");
   const [genero1, setGenero1] = useState("");
   const [genero2, setGenero2] = useState("");
-  const [pais, setPais] = useState("");
-  const [correo, setCorreo] = useState("");
-  const [numero, setNumero] = useState(0);
+  const [telefono, setPais] = useState(0);
+  const [email, setCorreo] = useState("");
+  const [pais, setNumero] = useState("");
 
   const add = ()=>{
     Axios.post("http://localhost:3001/create", {
       nombre: nombre,
       genero1: genero1,
       genero2: genero2,
-      pais: pais,
-      correo: correo,
-      numero: numero
+      telefono: telefono,
+      email: email,
+      pais: pais      
+      
     }).then(()=>{
       alert("Registro Ok")
     })
@@ -37,13 +38,13 @@ function App() {
         <label>Genero 2<input onChange={(event)=>{
           setGenero2(event.target.value);
         }} type="text"></input></label>
-        <label>Pais<input onChange={(event)=>{
+        <label>Numero Contacto<input onChange={(event)=>{
           setPais(event.target.value);
         }} type="text"></input></label>
         <label>Correo<input onChange={(event)=>{
           setCorreo(event.target.value);
         }} type="email"></input></label>
-        <label>Numero Contacto<input onChange={(event)=>{
+        <label>Pais<input onChange={(event)=>{
           setNumero(event.target.value);
         }} type="number"></input></label>
         <button onClick={add}>Registrar</button>
