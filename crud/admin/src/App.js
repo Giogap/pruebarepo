@@ -43,10 +43,10 @@ function App() {
         }} type="text"></input></label>
         <label>Correo<input onChange={(event)=>{
           setCorreo(event.target.value);
-        }} type="email"></input></label>
+        }} type="text"></input></label>
         <label>Pais<input onChange={(event)=>{
           setNumero(event.target.value);
-        }} type="number"></input></label>
+        }} type="text"></input></label>
         <button onClick={add}>Registrar</button>
       </div>
     </div>
