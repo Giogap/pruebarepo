@@ -1,3 +1,6 @@
+const { connect_db } = require('./database')
+
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan')
 
@@ -29,6 +32,7 @@ app.use('links', require('./routes/links'));
 
 
 //correr servidor
-app.listen(app.get('port'), () => {
+app.listen(app.get('port'), async () => {
+    await connect_db();
     console.log('server ok', app.get('port'));
 });
