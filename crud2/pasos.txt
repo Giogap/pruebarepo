@@ -12,6 +12,10 @@ npm install -g nodemon
 
 
 DB
+CREATE DATABASE db_blogm;
+
+USE db_blogm;
+
 CREATE TABLE blogs (
   id INT PRIMARY KEY AUTO_INCREMENT,
   title VARCHAR(100),
@@ -36,4 +40,4 @@ show tables;
 https://www.youtube.com/watch?v=e91eQ8nutgg
 
 FLUSH PRIVILEGES;
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'gap08501250';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '8501';
